@@ -76,8 +76,10 @@
             }
         },
     	mounted () {
-            this.$store.dispatch('changeLikeSongs')
-            this.getFocus()
+            if (this.$store.state.isLogin) {
+                this.$store.dispatch('changeLikeSongs')
+                this.getFocus()
+            }
     	}
     } 
 </script>

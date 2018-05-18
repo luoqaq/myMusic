@@ -91,8 +91,8 @@
                         this.showBtnSinger = true
                     } else if (res.body.code === 1) {
                         this.singer = singer.singer
-                        this.singerCount = '（爱好别致，无人能及）'
-                        this.user_tel_singer = singer.user_tel
+                        this.singerCount = 0
+                        this.user_tel_singer = '爱好别致，无人能及'
                     } else if (res.body.code === 2) {
                         this.user_tel_singer = '收藏同一歌手的3首歌才会有哦'
                     }

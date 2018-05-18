@@ -71,8 +71,10 @@
         },
         mounted(){
             this.getLyc();
-            this.$store.dispatch('changeLikeSongs')
-            this.isLikeM()
+            if (this.$store.state.isLogin) {
+                this.$store.dispatch('changeLikeSongs')
+                this.isLikeM()
+            }
             let _this =this;
             document.onclick=function () {
                 _this.closeListState()
